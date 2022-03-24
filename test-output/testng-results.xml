@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15701" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:57 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15701" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:57 IST">
+      <class name="com.mystore.testcases.AccountCreationPageTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="loadConfig" is-config="true" duration-ms="5" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="setup" is-config="true" duration-ms="8501" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyAccountPageTest()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="verifyAccountPageTest" duration-ms="6422" started-at="2022-03-24T17:22:50 IST" finished-at="2022-03-24T17:22:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccountPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="740" started-at="2022-03-24T17:22:57 IST" finished-at="2022-03-24T17:22:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mystore.testcases.AccountCreationPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
