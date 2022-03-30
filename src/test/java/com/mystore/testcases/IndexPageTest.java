@@ -3,6 +3,7 @@ package com.mystore.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
@@ -11,24 +12,27 @@ import com.mystorepageobjects.IndexPage;
 public class IndexPageTest extends BaseClass {
 	IndexPage ip;
 
-	@BeforeMethod
-	public void setup() {
-		launchBrowser();
+@Parameters("browser")
+	
+	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
+	public void setup(String browser)
+	{
+		launchBrowser(browser);
 	}
-
-	@AfterMethod
+	@AfterMethod(groups = {"Smoke","Sanity","Regression"})
 	public void tearDown() {
 		driver.quit();
 	}
 
-	@Test
+	@Test(groups = "Smoke")
 	public void verifyLogo() 
 	{
 		ip = new IndexPage();
 		boolean res = ip.validateLogo();
 		Assert.assertTrue(res);
 	}
-	@Test 
+	
+	@Test(groups = "Smoke")
 	public void verifyTitle()
 	  {
 	  String title=ip.getMyStoreTitle(); 

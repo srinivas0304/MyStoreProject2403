@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.actiondriver.Action;
@@ -23,7 +24,7 @@ public class BaseClass
 	public static Properties prop;
 	public static WebDriver driver;
 	
-	@BeforeTest
+	@BeforeTest(groups = {"Smoke","Sanity","Regression"})
 	public void loadConfig()
 	{
 		
@@ -44,22 +45,22 @@ public class BaseClass
 		}
 	}
 	
-	public  void launchBrowser()
+	public  void launchBrowser(String browserName)
 	{
 		//WebDriverManager.chromedriver().setup();
-		String browserName=prop.getProperty("browser");
+		//String browserName=prop.getProperty("browser");
 		
-		if(browserName.contains("chrome"))
+		if(browserName.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}
-		else if(browserName.contains("edge"))
+		else if(browserName.equalsIgnoreCase("edge"))
 		{
 			WebDriverManager.edgedriver().setup();
 			driver=new EdgeDriver();
 		}
-		else if(browserName.contains("firefox"))
+		else if(browserName.equalsIgnoreCase("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
@@ -69,6 +70,5 @@ public class BaseClass
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Action.imlicitWait(driver, 10);
 		driver.get(prop.getProperty("url"));
-	}
-		
+	}	
 }

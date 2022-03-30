@@ -3,6 +3,7 @@ package com.mystore.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
@@ -16,19 +17,21 @@ public class AccountCreationPageTest extends BaseClass
 	LoginPage loginPage;
 	AccountCreationPage acp;
 	
-	@BeforeMethod
-	public void setup()
+	@Parameters("browser")
+	
+	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
+	public void setup(String browser)
 	{
-		launchBrowser();
+		launchBrowser(browser);
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"Smoke","Sanity","Regression"})
 	public void tearDown()
 	{
 		driver.quit();
 	}
 	
-	@Test
+	@Test(groups = "Sanity")
 	public void verifyAccountPageTest()
 	{
 		indexPage=new IndexPage();

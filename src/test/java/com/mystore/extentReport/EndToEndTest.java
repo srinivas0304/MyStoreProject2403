@@ -51,9 +51,9 @@ public class EndToEndTest extends BaseClass
 	}
 	
 	@BeforeMethod
-	public void setup()
+	public void setup(String browser)
 	{
-		launchBrowser();
+		launchBrowser(browser);
 	}
 	
 	@AfterMethod

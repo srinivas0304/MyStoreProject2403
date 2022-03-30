@@ -9,7 +9,7 @@ import com.mystore.base.BaseClass;
 
 public class SearchResultPage extends BaseClass
 {
-	@FindBy(xpath="//div[@class='product-image-container']")
+	@FindBy(xpath="//div[@class='product-image-container']//img[@title='Faded Short Sleeve T-shirts']")
 	WebElement productResult;
 	
 	public SearchResultPage()
@@ -25,7 +25,7 @@ public class SearchResultPage extends BaseClass
 	public AddToCartPage clickOnProduct() throws InterruptedException
 	{
 		Thread.sleep(2000);
-		Action.click(driver, productResult,"//div[@class='product-image-container']");
+		Action.click(driver, productResult,"//div[@class='product-image-container']//img[@title='Faded Short Sleeve T-shirts']");
 		return new AddToCartPage();
 	}
 }

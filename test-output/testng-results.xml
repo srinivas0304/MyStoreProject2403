@@ -1,37 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="14" total="17" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="122534" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:20:38 IST">
+  <suite name="Suite" duration-ms="130662" started-at="2022-03-30T21:41:20 IST" finished-at="2022-03-30T21:43:31 IST">
     <groups>
+      <group name="Sanity">
+        <method signature="AddToCartTest.addToCart()[pri:0, instance:com.mystore.testcases.AddToCartTest@78186a70]" name="addToCart" class="com.mystore.testcases.AddToCartTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="AddToCartTest.addToCart()[pri:0, instance:com.mystore.testcases.AddToCartTest@78186a70]" name="addToCart" class="com.mystore.testcases.AddToCartTest"/>
+        <method signature="EndToEndTest.endToEndTest()[pri:0, instance:com.mystore.testcases.EndToEndTest@5c072e3f]" name="endToEndTest" class="com.mystore.testcases.EndToEndTest"/>
+        <method signature="OrderPageTest.verifyTotalPrice()[pri:0, instance:com.mystore.testcases.OrderPageTest@481a15ff]" name="verifyTotalPrice" class="com.mystore.testcases.OrderPageTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="122534" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:20:38 IST">
-      <class name="com.mystore.extentReport.EndToEndTest">
-        <test-method status="PASS" signature="setUpExtentReport()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="setUpExtentReport" is-config="true" duration-ms="72" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:18:35 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpExtentReport -->
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="loadConfig" is-config="true" duration-ms="1" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:18:35 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="setup" is-config="true" duration-ms="10988" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:18:46 IST">
+    <test name="Test" duration-ms="130662" started-at="2022-03-30T21:41:20 IST" finished-at="2022-03-30T21:43:31 IST">
+      <class name="com.mystore.testcases.EndToEndTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.EndToEndTest@5c072e3f]" name="setup" is-config="true" duration-ms="15355" started-at="2022-03-30T21:41:20 IST" finished-at="2022-03-30T21:41:35 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="endToEndTest()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="endToEndTest" duration-ms="110807" started-at="2022-03-30T14:18:46 IST" finished-at="2022-03-30T14:20:37 IST">
+        <test-method status="PASS" signature="endToEndTest()[pri:0, instance:com.mystore.testcases.EndToEndTest@5c072e3f]" name="endToEndTest" duration-ms="64019" started-at="2022-03-30T21:41:35 IST" finished-at="2022-03-30T21:42:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endToEndTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="tearDown" is-config="true" duration-ms="718" started-at="2022-03-30T14:20:37 IST" finished-at="2022-03-30T14:20:38 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.EndToEndTest@5c072e3f]" name="tearDown" is-config="true" duration-ms="761" started-at="2022-03-30T21:42:39 IST" finished-at="2022-03-30T21:42:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="flush()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="flush" is-config="true" duration-ms="191" started-at="2022-03-30T14:20:38 IST" finished-at="2022-03-30T14:20:38 IST">
+      </class> <!-- com.mystore.testcases.EndToEndTest -->
+      <class name="com.mystore.testcases.AddToCartTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.AddToCartTest@78186a70]" name="setup" is-config="true" duration-ms="9253" started-at="2022-03-30T21:43:10 IST" finished-at="2022-03-30T21:43:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- flush -->
-      </class> <!-- com.mystore.extentReport.EndToEndTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="addToCart()[pri:0, instance:com.mystore.testcases.AddToCartTest@78186a70]" name="addToCart" duration-ms="10919" started-at="2022-03-30T21:43:19 IST" finished-at="2022-03-30T21:43:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.AddToCartTest@78186a70]" name="tearDown" is-config="true" duration-ms="765" started-at="2022-03-30T21:43:30 IST" finished-at="2022-03-30T21:43:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mystore.testcases.AddToCartTest -->
+      <class name="com.mystore.testcases.OrderPageTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.OrderPageTest@481a15ff]" name="setup" is-config="true" duration-ms="11930" started-at="2022-03-30T21:42:40 IST" finished-at="2022-03-30T21:42:52 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyTotalPrice()[pri:0, instance:com.mystore.testcases.OrderPageTest@481a15ff]" name="verifyTotalPrice" duration-ms="16813" started-at="2022-03-30T21:42:52 IST" finished-at="2022-03-30T21:43:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTotalPrice -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.OrderPageTest@481a15ff]" name="tearDown" is-config="true" duration-ms="799" started-at="2022-03-30T21:43:09 IST" finished-at="2022-03-30T21:43:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mystore.testcases.OrderPageTest -->
+      <class name="com.mystore.testcases.LoginPageTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.mystore.testcases.LoginPageTest@2eda0940]" name="loadConfig" is-config="true" duration-ms="7" started-at="2022-03-30T21:41:20 IST" finished-at="2022-03-30T21:41:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+      </class> <!-- com.mystore.testcases.LoginPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
