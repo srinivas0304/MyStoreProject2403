@@ -18,7 +18,7 @@ public class IndexPage extends BaseClass
 	@FindBy(id="search_query_top")
 	WebElement searchBox;
 	
-	@FindBy(name="submit_search")
+	@FindBy(xpath="//button[@name='submit_search']")
 	WebElement submitBtn;
 	
 	
@@ -29,8 +29,8 @@ public class IndexPage extends BaseClass
 	
 	public LoginPage clickSign() 
 	{
-		//signInBtn.click();
-		Action.click(driver, signInBtn);
+		Action.fluentWait(driver, signInBtn, 10);
+		Action.click(driver, signInBtn,"//a[contains(text(),'Sign in')]");
 		return new LoginPage();
 	}
 	
@@ -49,7 +49,7 @@ public class IndexPage extends BaseClass
 	public SearchResultPage searchProduct(String producyName)
 	{
 		Action.type(searchBox, producyName);
-		Action.click(driver, submitBtn);
+		Action.click(driver, submitBtn,"//button[@name='submit_search']");
 		return new SearchResultPage();
 	}
 	

@@ -2,28 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15701" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:57 IST">
+  <suite name="Default suite" duration-ms="122534" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:20:38 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15701" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:57 IST">
-      <class name="com.mystore.testcases.AccountCreationPageTest">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="loadConfig" is-config="true" duration-ms="5" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:42 IST">
+    <test name="Default test" duration-ms="122534" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:20:38 IST">
+      <class name="com.mystore.extentReport.EndToEndTest">
+        <test-method status="PASS" signature="setUpExtentReport()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="setUpExtentReport" is-config="true" duration-ms="72" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:18:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpExtentReport -->
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="loadConfig" is-config="true" duration-ms="1" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:18:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="setup" is-config="true" duration-ms="8501" started-at="2022-03-24T17:22:42 IST" finished-at="2022-03-24T17:22:50 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="setup" is-config="true" duration-ms="10988" started-at="2022-03-30T14:18:35 IST" finished-at="2022-03-30T14:18:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyAccountPageTest()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="verifyAccountPageTest" duration-ms="6422" started-at="2022-03-24T17:22:50 IST" finished-at="2022-03-24T17:22:57 IST">
+        <test-method status="PASS" signature="endToEndTest()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="endToEndTest" duration-ms="110807" started-at="2022-03-30T14:18:46 IST" finished-at="2022-03-30T14:20:37 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAccountPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.AccountCreationPageTest@64f6106c]" name="tearDown" is-config="true" duration-ms="740" started-at="2022-03-24T17:22:57 IST" finished-at="2022-03-24T17:22:57 IST">
+        </test-method> <!-- endToEndTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="tearDown" is-config="true" duration-ms="718" started-at="2022-03-30T14:20:37 IST" finished-at="2022-03-30T14:20:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.mystore.testcases.AccountCreationPageTest -->
+        <test-method status="PASS" signature="flush()[pri:0, instance:com.mystore.extentReport.EndToEndTest@1990a65e]" name="flush" is-config="true" duration-ms="191" started-at="2022-03-30T14:20:38 IST" finished-at="2022-03-30T14:20:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+      </class> <!-- com.mystore.extentReport.EndToEndTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

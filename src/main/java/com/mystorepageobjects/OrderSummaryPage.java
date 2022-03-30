@@ -19,7 +19,7 @@ public class OrderSummaryPage extends BaseClass
 	
 	public OrderConfirmationPage clickOnConfirmOrder()
 	{
-		Action.click(driver, confirmOrderBtn);
+		Action.click(driver, confirmOrderBtn,"//span[text()='I confirm my order']");
 		return new OrderConfirmationPage();
 	}
 }

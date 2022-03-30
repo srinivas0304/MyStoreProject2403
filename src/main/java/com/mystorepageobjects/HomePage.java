@@ -9,12 +9,11 @@ import com.mystore.base.BaseClass;
 
 public class HomePage extends BaseClass
 {
-	@FindBy(xpath="//span[text()='My wishlists']")
+	@FindBy(xpath="//li[@class='lnk_wishlist']//span")
 	WebElement myWishList;
 	
-	@FindBy(xpath="//span[text()='Order history and details']")
+	@FindBy(xpath="//a[@title='Orders']//span")
 	WebElement orderHistory;
-	
 	
 	public HomePage()
 	{
@@ -23,6 +22,7 @@ public class HomePage extends BaseClass
 	
 	public boolean validateMyWishList()
 	{
+		Action.fluentWait(driver, myWishList, 10);
 		return Action.isDisplayed(driver, myWishList);
 	}
 	
@@ -31,9 +31,9 @@ public class HomePage extends BaseClass
 		return Action.isDisplayed(driver, orderHistory);
 	}
 	
-	public String getCurrentUrl()
-	{
-		String homePageUrl=driver.getCurrentUrl();
-		return homePageUrl;
-	}
+//	public String getCurrentUrl()
+//	{
+//		String homePageUrl=driver.getCurrentUrl();
+//		return homePageUrl;
+//	}
 }

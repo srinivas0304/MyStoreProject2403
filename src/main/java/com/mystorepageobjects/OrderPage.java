@@ -9,41 +9,43 @@ import com.mystore.base.BaseClass;
 
 public class OrderPage extends BaseClass
 {
-	@FindBy(xpath="//td[@class='cart_unit']//span//span")
+	@FindBy(xpath = "//td[@class='cart_unit']/span/span")
 	WebElement unitPrice;
-	
-	@FindBy(id="total_price")
+
+	@FindBy(id = "total_price")
 	WebElement totalPrice;
-	
-	@FindBy(xpath="//span[text()='Proceed to checkout']")
-	WebElement proceedToCheckOut;
-	
-	public OrderPage()
+
+	@FindBy(xpath="(//a[@title='Proceed to checkout'])[2]")
+	WebElement proceedToCheckOutBtn;
+
+	public OrderPage() 
 	{
-		PageFactory.initElements(driver, driver);
+		PageFactory.initElements(driver, this);
 	}
-	
-	public double getUnitPrice()
+
+	public double getUnitPrice() 
 	{
-		String unitPrice1=unitPrice.getText();
-		String unit=unitPrice1.replaceAll("[a-zA-Z0-9]", "");
-		double finalUnitPrice=Double.parseDouble(unit);
-		
-		return finalUnitPrice/100;
+		String unitPrice1 = unitPrice.getText();
+		String unit = unitPrice1.replaceAll("[^a-zA-Z0-9]", "");
+		double finalUnitPrice = Double.parseDouble(unit);
+		return finalUnitPrice / 100;
 	}
-	
-	public double getTotalPrice()
+
+	public double getTotalPrice() 
 	{
-		String totalPrice1=unitPrice.getText();
-		String tot=totalPrice1.replaceAll("[a-zA-Z0-9]", "");
-		double finalTotalPrice=Double.parseDouble(tot);
-		
+		String totalPrice1 = totalPrice.getText();
+		String tot = totalPrice1.replaceAll("[^a-zA-Z0-9]", "");
+		double finalTotalPrice = Double.parseDouble(tot);
 		return finalTotalPrice/100;
 	}
-	
-	public LoginPage clickOnCheckOut()
+
+	public LoginPage clickOnCheckOut() throws Throwable 
 	{
-		Action.click(driver, proceedToCheckOut);
+		//Action.scrollByVisibilityOfElement(driver, proceedToCheckOutBtn);
+		//Action.fluentWait(driver, proceedToCheckOutBtn, 10);
+		//Action.JSClick(driver, proceedToCheckOutBtn);
+		Thread.sleep(5000);
+		Action.click(driver, proceedToCheckOutBtn,"(//a[@title='Proceed to checkout'])[2]");
 		return new LoginPage();
 	}
 }

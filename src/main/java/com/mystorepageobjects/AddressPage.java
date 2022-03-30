@@ -19,9 +19,7 @@ public class AddressPage extends BaseClass
 	
 	public ShippingPage clickToCheckOut()
 	{
-		Action.click(driver, proceedToCheckOut);
+		Action.click(driver, proceedToCheckOut,"//span[text()='Proceed to checkout']");
 		return new ShippingPage();
 	}
-	
-	
 }

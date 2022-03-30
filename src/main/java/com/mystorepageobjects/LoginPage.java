@@ -7,52 +7,53 @@ import org.openqa.selenium.support.PageFactory;
 import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
-public class LoginPage extends BaseClass
+public class LoginPage extends BaseClass 
 {
+
 	
-	@FindBy(id="email")
+	@FindBy(id = "email")
 	WebElement username;
-	
-	@FindBy(name="passwd")
+
+	@FindBy(name = "passwd")
 	WebElement password;
-	
-	@FindBy(id="SubmitLogin")
+
+	@FindBy(xpath = "//button[@id='SubmitLogin']")
 	WebElement signInBtn;
-	
-	@FindBy(id="email_create")
+
+	@FindBy(id = "email_create")
 	WebElement emailForNewAccount;
-	
-	@FindBy(xpath="//i[@class='icon-user left']")
+
+	@FindBy(xpath = "//i[@class='icon-user left']")
 	WebElement createNewAccountBtn;
-	
-	public LoginPage()
+
+	public LoginPage() 
 	{
 		PageFactory.initElements(driver, this);
 	}
-	
-	public HomePage login(String username1, String password1)
+
+	public HomePage login(String uname, String pass) throws Exception
 	{
-//		username.sendKeys(uname);
-//		password.sendKeys(pass);
-//		submitBtn.click();
-		Action.type(username, username1);
-		Action.type(password, password1);
-		Action.click(driver, signInBtn);
+		Action.type(username, uname);
+		Action.type(password, pass);
+		Thread.sleep(2000);
+		Action.click(driver, signInBtn,"//a[contains(text(),'Sign in')]");		
 		return new HomePage();
 	}
-	
-	public AddressPage login1(String username1, String password1)
+
+	public AddressPage login1(String uname, String pass) throws Exception 
 	{
-	Action.type(username, username1);
-	Action.type(password, password1);
-	Action.click(driver, signInBtn);
-	return new AddressPage();
+		Action.type(username, uname);
+		Action.type(password, pass);
+		Thread.sleep(2000);
+		Action.click(driver, signInBtn,"//button[@id='SubmitLogin']");
+		//Thread.sleep(5000);
+		return new AddressPage();
 	}
 	
-	public AccountCreationPage createNewAccount(String newMail)
+	public AccountCreationPage createNewAccount(String newMail) 
 	{
 		Action.type(emailForNewAccount, newMail);
-		Action.click(driver, createNewAccountBtn);
+		Action.click(driver, createNewAccountBtn,"//i[@class='icon-user left']");
 		return new AccountCreationPage();
 	}
 }

@@ -15,18 +15,19 @@ public class PaymentPage extends BaseClass
 	@FindBy(xpath="//a[contains(text(),'Pay by check')]")
 	WebElement payByCheck;
 	
+	@FindBy(xpath="//a[@class='home']")
+	WebElement scroll;
 	public PaymentPage()
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-	public OrderSummaryPage clickOnPayment()
+	public OrderSummaryPage clickOnPayment() throws Exception
 	{
-		Action.click(driver, payByBankWire);
+		Thread.sleep(2000);
+		Action.scrollByVisibilityOfElement(driver, scroll);
+		//Action.click(driver, payByBankWire,"//a[contains(text(),'Pay by bank wire')]");
+		payByBankWire.click();
 		return new OrderSummaryPage();
 	}
-	
-	
-	
 }

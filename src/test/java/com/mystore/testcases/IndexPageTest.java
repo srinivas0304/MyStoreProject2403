@@ -22,18 +22,18 @@ public class IndexPageTest extends BaseClass {
 	}
 
 	@Test
-	public void verifyLogo() {
+	public void verifyLogo() 
+	{
 		ip = new IndexPage();
 		boolean res = ip.validateLogo();
 		Assert.assertTrue(res);
 	}
-
-	
-	  @Test 
-	  public void verifyTitle()
+	@Test 
+	public void verifyTitle()
 	  {
-	  String title=ip.getMyStoreTitle(); String exp="My Store";
-	  Assert.assertEquals(title, exp); 
+	  String title=ip.getMyStoreTitle(); 
+	  String exp="My Store";
+	  Assert.assertEquals(title, exp);
 	  }
 	 
 }

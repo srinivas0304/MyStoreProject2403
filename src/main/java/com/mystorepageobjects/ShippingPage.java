@@ -9,25 +9,50 @@ import com.mystore.base.BaseClass;
 
 public class ShippingPage extends BaseClass
 {
-	@FindBy(id="uniform-cgv")
-	WebElement checkOut;
+//	@FindBy(xpath="//input[@id='cgv']")
+//	WebElement checkBox;
+//	
+//	@FindBy(xpath="//button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]")
+//	WebElement checkOutBtn;
+//	
+//	public ShippingPage()
+//	{
+//		PageFactory.initElements(driver, this);
+//	}
+//	
+//	public void checkTheTerms() throws InterruptedException
+//	{
+//		Thread.sleep(2000);
+//		Action.scrollByVisibilityOfElement(driver, checkBox);
+//		Action.click(driver, checkBox,"//input[@id='cgv']");
+//	}
+//	
+//	public PaymentPage clickOnProceedToCheckOut() throws Exception
+//	{
+//		Thread.sleep(2000);
+//		Action.JSClick(driver, checkOutBtn);
+//		//Action.click(driver, checkOutBtn,"//button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]");
+//		//checkOutBtn.click();
+//		return new PaymentPage();
+//	}
 	
-	@FindBy(xpath="(//span[contains(text(),'Proceed to checkout')])[2]")
-	WebElement proceedToCheckOutBtn;
-	
+	@FindBy(id="cgv") WebElement checkBox;
+	@FindBy(xpath="//button/span[contains(text(),'Proceed to checkout')]") WebElement checkOutBtn;
+	@FindBy(xpath="(//div[@id='columns']//a/i)[1]") WebElement homeIcon;
 	public ShippingPage()
 	{
-		PageFactory.initElements(driver, this);
+	PageFactory.initElements(driver, this);
 	}
-	
-	public void checkTheTerms()
+	public void clickOnCheckBox() throws Exception
 	{
-		Action.click(driver, checkOut);
+	new Action().scrollByVisibilityOfElement(driver, homeIcon);
+	new Action().JSClick(driver, checkBox);
 	}
-	public PaymentPage clickOnCheckBox()
-	{
-		Action.click(driver, proceedToCheckOutBtn);
-		return new PaymentPage();
+	public PaymentPage clickOnCheckoutBtn() {
+	new Action().click(driver,checkOutBtn, "//button/span[contains(text(),'Proceed to checkout')]");
+	return new PaymentPage();
 	}
+
+
 	
 }

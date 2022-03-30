@@ -9,7 +9,7 @@ import com.mystore.base.BaseClass;
 
 public class SearchResultPage extends BaseClass
 {
-	@FindBy(xpath="//div[@id='center_column']")
+	@FindBy(xpath="//div[@class='product-image-container']")
 	WebElement productResult;
 	
 	public SearchResultPage()
@@ -22,9 +22,10 @@ public class SearchResultPage extends BaseClass
 		return Action.isDisplayed(driver, productResult);
 	}
 	
-	public AddToCartPage clickOnProduct()
+	public AddToCartPage clickOnProduct() throws InterruptedException
 	{
-		Action.click(driver, productResult);
+		Thread.sleep(2000);
+		Action.click(driver, productResult,"//div[@class='product-image-container']");
 		return new AddToCartPage();
 	}
 }
